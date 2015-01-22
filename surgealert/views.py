@@ -25,7 +25,7 @@ def index(request):
 	cities.append(glendale)
 	cities.append(northhollywood)
 	info = ''
-	names = ["Santa Monica","Manhattan Beach","West Hollywood","Koreatown","Midwilshire","Downtown","Glendale","North Hollywood"]
+	names = ["Umhlanga","Manhattan Beach","West Hollywood","Koreatown","Midwilshire","Downtown","Glendale","North Hollywood"]
 
 	for i in cities:
 		payload = cities[cities.index(i)]
