@@ -12,7 +12,7 @@ def index(request):
 	ballito = {'start_latitude':'-29.532501','start_longitude':'31.207665','end_latitude':'-29.494039','end_longitude':'31.241015'}
 	durbannorth = {'start_latitude':'-29.784593','start_longitude':'31.038888','end_latitude':'-29.758671','end_longitude':'31.054951'}
 	stadium = {'start_latitude':'-29.826097','start_longitude':'31.029597','end_latitude':'-29.850944','end_longitude':'31.028358'}
-	icc = {'start_latitude':'-29.856081','start_longitude':'31.029860','end_latitude':'-29.870115','end_longitude':'31.046594'}
+	icccentre = {'start_latitude':'-29.856081','start_longitude':'31.029860','end_latitude':'-29.870115','end_longitude':'31.046594'}
 	florida = {'start_latitude':'-29.834611','start_longitude':'31.017915','end_latitude':'-29.848767','end_longitude':'30.999229'}
 
 	cities = []
@@ -22,7 +22,7 @@ def index(request):
 	cities.append(ballito)
 	cities.append(durbannorth)
 	cities.append(stadium)
-	cities.append(icc)
+	cities.append(icccentre)
 	cities.append(florida)
 	info = ''
 	names = ["Umhlanga","Umhlanga Top","Durban Airport","Ballito","Durban North","Stadium","ICC","Florida Road"]
@@ -34,7 +34,7 @@ def index(request):
 		data = json.loads(r.text)
 		info = info + (names[cities.index(i)]) + '    '
 		info = info + (data['prices'][0]['display_name']) + '    '
-		info = info + (data['prices'][0]['estimate']) + '    '
+		#info = info + (data['prices'][0]['estimate']) + '    '
 		info = info + str((data['prices'][0]['surge_multiplier'])) + '  <br/><br/>'	
 	return HttpResponse(info)
 
