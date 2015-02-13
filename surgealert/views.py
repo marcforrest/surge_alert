@@ -9,23 +9,23 @@ def index(request):
 	umhlanga = {'start_latitude':'-29.7275699','start_longitude':'31.0875162','end_latitude':'-29.7254724','end_longitude':'31.0711843'}
 	umhlangatop = {'start_latitude':'-29.7098408','start_longitude':'31.0857761','end_latitude':'-29.7326701','end_longitude':'31.0835223'}
 	durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474','end_latitude':'-29.667131','end_longitude':'31.116346'}
-	koreatown = {'start_latitude':'34.069112','start_longitude':'-118.281384','end_latitude':'34.019479','end_longitude':'-118.401718'}
-	midwilshire = {'start_latitude':'34.057166','start_longitude':'-118.323956','end_latitude':'34.019479','end_longitude':'-118.401718'}
-	downtown = {'start_latitude':'34.042943','start_longitude':'-118.260098','end_latitude':'34.019479','end_longitude':'-118.401718'}
-	glendale = {'start_latitude':'34.137907','start_longitude':'-118.250141','end_latitude':'34.019479','end_longitude':'-118.401718'}
-	northhollywood = {'start_latitude':'34.161161','start_longitude':'-118.358803','end_latitude':'34.019479','end_longitude':'-118.401718'}
+	ballito = {'start_latitude':'-29.532501','start_longitude':'31.207665','end_latitude':'-29.494039','end_longitude':'31.241015'}
+	durbannorth = {'start_latitude':'-29.784593','start_longitude':'31.038888','end_latitude':'-29.758671','end_longitude':'31.054951'}
+	stadium = {'start_latitude':'-29.826097','start_longitude':'31.029597','end_latitude':'-29.850944','end_longitude':'31.028358'}
+	icc = {'start_latitude':'-29.856081','start_longitude':'31.029860','end_latitude':'-29.870115','end_longitude':'31.046594'}
+	florida = {'start_latitude':'-29.834611','start_longitude':'31.017915','end_latitude':'-29.848767','end_longitude':'30.999229'}
 
 	cities = []
 	cities.append(umhlanga)
 	cities.append(umhlangatop)
 	cities.append(durbanairport)
-	cities.append(koreatown)
-	cities.append(midwilshire)
-	cities.append(downtown)
-	cities.append(glendale)
-	cities.append(northhollywood)
+	cities.append(ballito)
+	cities.append(durbannorth)
+	cities.append(stadium)
+	cities.append(icc)
+	cities.append(florida)
 	info = ''
-	names = ["Umhlanga","Umhlanga Top","Durban Airport","Koreatown","Midwilshire","Downtown","Glendale","North Hollywood"]
+	names = ["Umhlanga","Umhlanga Top","Durban Airport","Ballito","Durban North","Stadium","ICC","Florida Road"]
 
 	for i in cities:
 		payload = cities[cities.index(i)]
