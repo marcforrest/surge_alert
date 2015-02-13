@@ -8,7 +8,7 @@ from .models import Greeting
 def index(request):
 	umhlanga = {'start_latitude':'-29.7275699','start_longitude':'31.0875162','end_latitude':'-29.7254724','end_longitude':'31.0711843'}
 	umhlangatop = {'start_latitude':'-29.7098408','start_longitude':'31.0857761','end_latitude':'-29.7326701','end_longitude':'31.0835223'}
-	westhollywood = {'start_latitude':'34.085036','start_longitude':'-118.359318','end_latitude':'34.019479','end_longitude':'-118.401718'}
+	durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474','end_latitude':'-29.667131','end_longitude':'31.116346'}
 	koreatown = {'start_latitude':'34.069112','start_longitude':'-118.281384','end_latitude':'34.019479','end_longitude':'-118.401718'}
 	midwilshire = {'start_latitude':'34.057166','start_longitude':'-118.323956','end_latitude':'34.019479','end_longitude':'-118.401718'}
 	downtown = {'start_latitude':'34.042943','start_longitude':'-118.260098','end_latitude':'34.019479','end_longitude':'-118.401718'}
@@ -18,14 +18,14 @@ def index(request):
 	cities = []
 	cities.append(umhlanga)
 	cities.append(umhlangatop)
-	cities.append(westhollywood)
+	cities.append(durbanairport)
 	cities.append(koreatown)
 	cities.append(midwilshire)
 	cities.append(downtown)
 	cities.append(glendale)
 	cities.append(northhollywood)
 	info = ''
-	names = ["Umhlanga","Umhlanga Top","West Hollywood","Koreatown","Midwilshire","Downtown","Glendale","North Hollywood"]
+	names = ["Umhlanga","Umhlanga Top","Durban Airport","Koreatown","Midwilshire","Downtown","Glendale","North Hollywood"]
 
 	for i in cities:
 		payload = cities[cities.index(i)]
