@@ -13,6 +13,8 @@ def index(request):
 	stadium = {'start_latitude':'-29.826097','start_longitude':'31.029597','end_latitude':'-29.850944','end_longitude':'31.028358'}
 	icccentre = {'start_latitude':'-29.856081','start_longitude':'31.029860','end_latitude':'-29.870115','end_longitude':'31.046594'}
 	florida = {'start_latitude':'-29.834611','start_longitude':'31.017915','end_latitude':'-29.848767','end_longitude':'30.999229'}
+	capetown = {'start_latitude':'-33.903873','start_longitude':'18.417908','end_latitude':'-33.933116','end_longitude':'18.408172'}
+	
 
 	cities = []
 	cities.append(umhlanga)
@@ -22,8 +24,9 @@ def index(request):
 	cities.append(stadium)
 	cities.append(icccentre)
 	cities.append(florida)
+	cities.append(capetown)
 	info = ''
-	names = ["Umhlanga","Umhlanga Top","Durban Airport","Durban North","Stadium","ICC","Florida Road"]
+	names = ["Umhlanga","Umhlanga Top","Durban Airport","Durban North","Stadium","ICC","Florida Road", "Cape Town"]
 
 	for i in cities:
 		payload = cities[cities.index(i)]
