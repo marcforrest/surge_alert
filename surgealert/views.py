@@ -33,8 +33,8 @@ def index(request):
 		headers = {'Authorization':'Token mV8OnocNrS60lQlCmB-VN8PaUOfOjW4svx9SRCM1'}
 		r = requests.get('https://api.uber.com/v1/estimates/price', params = payload, headers=headers)
 		data = json.loads(r.text)
-		info = info + '<item><title>'+(names[cities.index(i)]) + '</title>'
-		info = info + '<description>'+(data['prices'][0]['display_name']) + ' - ' 
+		info = info + '<item><title>' + (names[cities.index(i)]) + '</title>'
+		info = info + '<description>' + (data['prices'][0]['display_name']) + ' - ' 
 		info = info + str((data['prices'][0]['surge_multiplier'])) + '</description></item>'	
 	return HttpResponse(info)
 
