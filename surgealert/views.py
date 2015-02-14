@@ -28,7 +28,8 @@ def index(request):
 	info = ''
 	names = ["Umhlanga","Umhlanga Top","Durban Airport","Durban North","Stadium","ICC","Florida Road", "Cape Town"]
 	info = '<?xml version="1.0" encoding="UTF-8" ?> <rss version="2.0"> <channel> <title>Durban Surge</title><link></link>  <description></description>'
-		
+	#info2
+	
 	for i in cities:
 		payload = cities[cities.index(i)]
 		headers = {'Authorization':'Token mV8OnocNrS60lQlCmB-VN8PaUOfOjW4svx9SRCM1'}
@@ -38,7 +39,10 @@ def index(request):
 		info = info + '<description>' + (data['prices'][0]['display_name']) + ' - ' 
 		info = info + str((data['prices'][0]['surge_multiplier'])) + '</description></item>'	
 	#return HttpResponse(info)
-	print info + '</channel> </rss>'
+	response = HttpResponse()
+	response.write(info)
+	response.write('</channel> </rss>')
+	#print info + '</channel> </rss>'
 	
 
 def db(request):
