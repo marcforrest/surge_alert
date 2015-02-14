@@ -37,9 +37,9 @@ def index(request):
 		info = info + '<item><title>' + (names[cities.index(i)]) + '</title>'
 		info = info + '<description>' + (data['prices'][0]['display_name']) + ' - ' 
 		info = info + str((data['prices'][0]['surge_multiplier'])) + '</description></item>'	
-		info = info + '</channel></rss>'
-	return HttpResponse(info)
-
+	#return HttpResponse(info)
+	print info + '</channel> </rss>'
+	
 
 def db(request):
 
