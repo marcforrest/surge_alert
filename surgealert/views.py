@@ -38,10 +38,10 @@ def index(request):
 		info = info + '<item><title>' + (names[cities.index(i)]) + '</title>'
 		info = info + '<description>' + (data['prices'][0]['display_name']) + ' - ' 
 		info = info + str((data['prices'][0]['surge_multiplier'])) + '</description></item>'	
-	#return HttpResponse(info)
-	response = HttpResponse()
-	response.write(info)
-	response.write('</channel> </rss>')
+	return HttpResponse(info)
+	#response = HttpResponse()
+	#response.write(info)
+	#response.write('</channel> </rss>')
 	#print info + '</channel> </rss>'
 	
 
