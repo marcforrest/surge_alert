@@ -19,10 +19,13 @@ def index(request):
 		headers = {'Authorization':'Token mV8OnocNrS60lQlCmB-VN8PaUOfOjW4svx9SRCM1'}
 		r = requests.get('https://api.uber.com/v1/estimates/time', params = payload, headers=headers)
 		data = json.loads(r.text)
-		info = info + (names[cities.index(i)]) + '    '
-		info = info + (data['times'][0]['display_name']) + '    '
-		info = info + str((data['times'][0]['estimate'])) + '  <br/><br/>'	
-	return HttpResponse(info)
+		if response.status_code != 200:
+			return 'There was an error', response.status_code
+		else			
+			info = info + (names[cities.index(i)]) + '    '
+			info = info + (data['times'][0]['display_name']) + '    '
+			info = info + str((data['times'][0]['estimate'])) + '  <br/><br/>'	
+			return HttpResponse(info)
 
 
 def db(request):
