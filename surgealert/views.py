@@ -8,7 +8,8 @@ from .models import Greeting
 def index(request):
 	#umhlanga = {'start_latitude':'-29.7275699','start_longitude':'31.0875162'}
 	#umhlangatop = {'start_latitude':'-29.7098408','start_longitude':'31.0857761'}
-	durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474'}
+	#durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474'}
+	durbanairport = {'start_latitude':'-29.4874578','start_longitude':'31.2313594'}
 	#durbannorth = {'start_latitude':'-29.784593','start_longitude':'31.038888'}
 	#stadium = {'start_latitude':'-29.826097','start_longitude':'31.029597'}
 	#icccentre = {'start_latitude':'-29.856081','start_longitude':'31.029860'}
