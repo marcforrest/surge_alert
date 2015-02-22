@@ -6,7 +6,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-	durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474'}
+	durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474', 'product_id' : 'd7056057-5e4a-4aae-8735-11d0b929bda2'}
 	
 
 	cities = []
@@ -21,7 +21,6 @@ def index(request):
 		data = json.loads(r.text)
 		info = info + (names[cities.index(i)]) + '    '
 		info = info + (data['times'][0]['display_name']) + '    '
-		info = info + (data['times'][0]['product_id']) + '    '
 		info = info + str((data['times'][0]['estimate'])) + '  <br/><br/>'	
 	return HttpResponse(info)
 
