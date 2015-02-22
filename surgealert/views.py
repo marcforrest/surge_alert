@@ -13,7 +13,7 @@ def index(request):
 	stadium = {'start_latitude':'-29.826097','start_longitude':'31.029597'}
 	icccentre = {'start_latitude':'-29.856081','start_longitude':'31.029860'}
 	florida = {'start_latitude':'-29.834611','start_longitude':'31.017915'}
-	capetown = {'start_latitude':'-33.903873','start_longitude':'18.417908'}
+	#capetown = {'start_latitude':'-33.903873','start_longitude':'18.417908'}
 	
 
 	cities = []
@@ -24,9 +24,9 @@ def index(request):
 	cities.append(stadium)
 	cities.append(icccentre)
 	cities.append(florida)
-	cities.append(capetown)
+	#cities.append(capetown)
 	info = ''
-	names = ["Umhlanga","Umhlanga Top","Durban Airport","Durban North","Stadium","ICC","Florida Road", "Cape Town"]
+	names = ["Umhlanga","Umhlanga Top","Durban Airport","Durban North","Stadium","ICC","Florida Road"]
 	#names = ["Durban Airport"]
 
 	for i in cities:
