@@ -6,27 +6,19 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-	umhlanga = {'start_latitude':'-29.7275699','start_longitude':'31.0875162','end_latitude':'-29.7254724','end_longitude':'31.0711843'}
-	umhlangatop = {'start_latitude':'-29.7098408','start_longitude':'31.0857761','end_latitude':'-29.7326701','end_longitude':'31.0835223'}
-	durbanairport = {'start_latitude':'-29.623938','start_longitude':'31.097474','end_latitude':'-29.667131','end_longitude':'31.116346'}
-	durbannorth = {'start_latitude':'-29.784593','start_longitude':'31.038888','end_latitude':'-29.758671','end_longitude':'31.054951'}
-	stadium = {'start_latitude':'-29.826097','start_longitude':'31.029597','end_latitude':'-29.850944','end_longitude':'31.028358'}
-	icccentre = {'start_latitude':'-29.856081','start_longitude':'31.029860','end_latitude':'-29.870115','end_longitude':'31.046594'}
-	florida = {'start_latitude':'-29.834611','start_longitude':'31.017915','end_latitude':'-29.848767','end_longitude':'30.999229'}
-	capetown = {'start_latitude':'-33.903873','start_longitude':'18.417908','end_latitude':'-33.933116','end_longitude':'18.408172'}
+	airport = {'start_latitude':'-26.1291975','start_longitude':'28.2405777','end_latitude':'-26.133945','end_longitude':'-26.133945'}
+	Sandton = {'start_latitude':'-26.1313443','start_longitude':'28.1041001','end_latitude':'-26.1228039','end_longitude':'27.9625699'}
+	EllisPark = {'start_latitude':'-26.2004482','start_longitude':'28.0510613','end_latitude':'-26.2013242','end_longitude':'28.0459114'}
+	Midrand = {'start_latitude':'-26.0053635','start_longitude':'28.1036319','end_latitude':'-25.9879091','end_longitude':'28.1256145'}
 	
-
 	cities = []
-	cities.append(umhlanga)
-	cities.append(umhlangatop)
-	cities.append(durbanairport)
-	cities.append(durbannorth)
-	cities.append(stadium)
-	cities.append(icccentre)
-	cities.append(florida)
-	cities.append(capetown)
+	cities.append(Airport)
+	cities.append(Sandton)
+	cities.append(EllisPark)
+	cities.append(Midrand)
+
 	info = ''
-	names = ["Umhlanga","Umhlanga Top","Durban Airport","Durban North","Stadium","ICC","Florida Road", "Cape Town"]
+	names = ["Airport","Sandton","EllisPark","Midrand"]
 
 	for i in cities:
 		payload = cities[cities.index(i)]
