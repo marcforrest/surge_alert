@@ -6,7 +6,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-	airport = {'start_latitude':'-26.1291975','start_longitude':'28.2405777','end_latitude':'-26.133945','end_longitude':'-26.133945', 'product_id' : 'a22c8ed2-8c70-4368-8035-d64eb0b5b183'}
+	airport = {'start_latitude':'-26.1291975','start_longitude':'28.2405777','end_latitude':'-26.133945','end_longitude':'28.2396804', 'product_id' : 'a22c8ed2-8c70-4368-8035-d64eb0b5b183'}
 	Sandton = {'start_latitude':'-26.1313443','start_longitude':'28.1041001','end_latitude':'-26.1228039','end_longitude':'27.9625699', 'product_id' : 'a22c8ed2-8c70-4368-8035-d64eb0b5b183'}
 	EllisPark = {'start_latitude':'-26.2004482','start_longitude':'28.0510613','end_latitude':'-26.2013242','end_longitude':'28.0459114', 'product_id' : 'a22c8ed2-8c70-4368-8035-d64eb0b5b183'}
 	Midrand = {'start_latitude':'-26.0053635','start_longitude':'28.1036319','end_latitude':'-25.9879091','end_longitude':'28.1256145', 'product_id' : 'a22c8ed2-8c70-4368-8035-d64eb0b5b183'}
