@@ -19,16 +19,18 @@ def index(request):
 
 	info = ''
 	names = ["Airport","Sandton","EllisPark","Midrand"]
-
+	info = '<?xml version="1.0" encoding="UTF-8" ?> <rss version="2.0"> <channel> <title>Joburg Surge</title><link></link>  <description></description>'
+	
 	for i in cities:
 		payload = cities[cities.index(i)]
 		headers = {'Authorization':'Token lLH8AXcPuzyGXocg6e4uXB37TYeandwplaomCnX3'}
 		r = requests.get('https://api.uber.com/v1/estimates/price', params = payload, headers=headers)
 		data = json.loads(r.text)
-		info = info + (names[cities.index(i)]) + '    '
-		info = info + (data['prices'][1]['display_name']) + '    '
-		info = info + str((data['prices'][1]['surge_multiplier'])) + '  <br/><br/>'	
-	return HttpResponse(info)
+		info = info + '<item><title>' + (names[cities.index(i)]) + '</title>'
+		info = info + '<description>' + (data['prices'][1]['display_name']) + ' - ' 
+		info = info + str((data['prices'][1]['surge_multiplier'])) + '</description></item>'	
+	return HttpResponse(info + '</channel> </rss>')	
+
 
 
 def db(request):
