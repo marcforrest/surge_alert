@@ -15,13 +15,13 @@ def index(request):
 	cities.append(durbanairport)
 	cities.append(stadium)
 	info = ''
-	names = ["Umhlanga","Durban Airport","Stadium"]
+	names = ["Umhlanga & Durban North","Airport & Umdloti","Durban Central & Stadium"]
 	info = '<?xml version="1.0" encoding="UTF-8" ?> <rss version="2.0"> <channel> <title>Durban Surge</title><link></link>  <description></description>'
 	#info2
 	
 	for i in cities:
 		payload = cities[cities.index(i)]
-		headers = {'Authorization':'Token mV8OnocNrS60lQlCmB-VN8PaUOfOjW4svx9SRCM1'}
+		headers = {'Authorization':'Token OrgGRZYTTVJTUcfQ_LiVFr8vFqRw4feetgE46PAg'}
 		r = requests.get('https://api.uber.com/v1/estimates/price', params = payload, headers=headers)
 		data = json.loads(r.text)
 		info = info + '<item><title>' + (names[cities.index(i)]) + '</title>'
