@@ -15,7 +15,7 @@ def index(request):
 	cities.append(durbanairport)
 	cities.append(stadium)
 	info = ''
-	names = ["Umhlanga & Durban North","Airport & Umdloti","Durban Central & Stadium"]
+	names = ["Umhlanga and Durban North","Airport and Umdloti","Durban Central and Stadium"]
 	info = '<?xml version="1.0" encoding="UTF-8" ?> <rss version="2.0"> <channel> <title>Durban Surge</title><link></link>  <description></description>'
 	#info2
 	
